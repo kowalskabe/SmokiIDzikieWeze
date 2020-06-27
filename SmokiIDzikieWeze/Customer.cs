@@ -14,6 +14,16 @@ namespace SmokiIDzikieWeze
         private string email;
 
 
+        Customer()
+        {
+
+        }
+
+        Customer(int customerId)
+        {
+            CustomerId = customerId;
+        }
+
         public int CustomerId
         {
             get { return customerId; }
