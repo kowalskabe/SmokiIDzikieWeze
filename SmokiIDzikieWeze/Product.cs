@@ -10,18 +10,22 @@ namespace SmokiIDzikieWeze
     public class Product
     {
         private int productId;
-        private decimal currentPrice;
+        private double currentPrice;
         private string productName;
         private string productDescription;
+        private static int NumberOfProducts = 0;
 
-
-        Product() 
+        public Product() 
         { 
         }
 
-        Product(int productId)
+        public Product(string productName, double currentPrice, string productDescription)
         {
-            ProductId = productId;
+            NumberOfProducts += 1;
+            ProductId = NumberOfProducts;
+            this.productName = productName;
+            this.productDescription = productDescription;
+            this.currentPrice = currentPrice;
         }
 
 
@@ -31,7 +35,11 @@ namespace SmokiIDzikieWeze
             private set { productId = value; }
         }
 
-        public decimal? CurrentPrice { get; set; }
+        public double CurrentPrice 
+        {
+            get { return currentPrice; }
+            set { currentPrice = value; } 
+        }
 
         public string ProductName
         {
@@ -43,6 +51,11 @@ namespace SmokiIDzikieWeze
         {
             get { return productDescription; }
             set { productDescription = value; }
+        }
+
+        public override string ToString()
+        {
+            return $"{ProductId}\t {ProductName}";
         }
     }
 }

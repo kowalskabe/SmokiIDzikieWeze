@@ -96,6 +96,7 @@
             this.listBoxListOfProducts.Name = "listBoxListOfProducts";
             this.listBoxListOfProducts.Size = new System.Drawing.Size(422, 524);
             this.listBoxListOfProducts.TabIndex = 7;
+            this.listBoxListOfProducts.SelectedIndexChanged += new System.EventHandler(this.listBoxListOfProducts_SelectedIndexChanged);
             // 
             // label1
             // 

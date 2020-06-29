@@ -9,7 +9,10 @@ namespace SmokiIDzikieWeze
     public class CustomerRepository
     {
         private List<Customer> customers = new List<Customer>();
-
+        Customer c1 = new Customer("Barbara", "Kowalska", "kowaska.barbara@gmail.com");
+        Customer c2 = new Customer("Katarzyna", "Czarnecka", "czarnecka.katarzyna@gmail.com");
+        Customer c3 = new Customer("Sylwia", "Czupajło", "czupajlo.sylwia@gmail.com");
+        Customer c4 = new Customer("Joanna", "Pawłowska", "pawlowska.joanna@gmail.com");
         public Customer Retrieve (int customerId)
         {
             //tmp
@@ -19,10 +22,10 @@ namespace SmokiIDzikieWeze
         }
         public List<Customer> Retrieve()
         {
-            customers.Add(new Customer("Barbara", "Kowalska", "kowaska.barbara@gmail.com"));
-            customers.Add(new Customer("Katarzyna", "Czarnecka", "czarnecka.katarzyna@gmail.com"));
-            customers.Add(new Customer("Sylwia", "Czupajło", "czupajlo.sylwia@gmail.com"));
-            customers.Add(new Customer("Joanna", "Pawłowska", "pawlowska.joanna@gmail.com"));
+            customers.Add(c1);
+            customers.Add(c2);
+            customers.Add(c3);
+            customers.Add(c4);
             return customers;
         }
         

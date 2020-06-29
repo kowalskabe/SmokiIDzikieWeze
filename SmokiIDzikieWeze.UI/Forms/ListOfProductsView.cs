@@ -15,6 +15,13 @@ namespace SmokiIDzikieWeze.UI.Forms
         public ListOfProductsView()
         {
             InitializeComponent();
+            var repo = new ProductRepository().Retrieve();
+            listBoxListOfProducts.DataSource = repo;
+        }
+
+        private void listBoxListOfProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
