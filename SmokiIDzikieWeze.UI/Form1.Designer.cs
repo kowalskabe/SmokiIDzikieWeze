@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnShopping = new System.Windows.Forms.Button();
-            this.btnCustomers = new System.Windows.Forms.Button();
-            this.btnProducts = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
+            this.btnProducts = new System.Windows.Forms.Button();
+            this.btnCustomers = new System.Windows.Forms.Button();
+            this.btnShopping = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblLogo = new System.Windows.Forms.Label();
             this.panelDashboard = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -54,67 +54,8 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 450);
+            this.panelMenu.Size = new System.Drawing.Size(220, 753);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.lblLogo);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // btnShopping
-            // 
-            this.btnShopping.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnShopping.FlatAppearance.BorderSize = 0;
-            this.btnShopping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShopping.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnShopping.Location = new System.Drawing.Point(0, 80);
-            this.btnShopping.Name = "btnShopping";
-            this.btnShopping.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnShopping.Size = new System.Drawing.Size(220, 60);
-            this.btnShopping.TabIndex = 1;
-            this.btnShopping.Text = "Zakupy";
-            this.btnShopping.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShopping.UseVisualStyleBackColor = true;
-            this.btnShopping.Click += new System.EventHandler(this.btnShopping_Click);
-            // 
-            // btnCustomers
-            // 
-            this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomers.FlatAppearance.BorderSize = 0;
-            this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCustomers.Location = new System.Drawing.Point(0, 140);
-            this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCustomers.Size = new System.Drawing.Size(220, 60);
-            this.btnCustomers.TabIndex = 2;
-            this.btnCustomers.Text = "Baza klientów";
-            this.btnCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomers.UseVisualStyleBackColor = true;
-            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
-            // 
-            // btnProducts
-            // 
-            this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProducts.FlatAppearance.BorderSize = 0;
-            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProducts.Location = new System.Drawing.Point(0, 200);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnProducts.Size = new System.Drawing.Size(220, 60);
-            this.btnProducts.TabIndex = 3;
-            this.btnProducts.Text = "Baza produktów";
-            this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducts.UseVisualStyleBackColor = true;
-            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // btnOrders
             // 
@@ -132,27 +73,64 @@
             this.btnOrders.UseVisualStyleBackColor = true;
             this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
-            // panelTitleBar
+            // btnProducts
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.MediumOrchid;
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(580, 80);
-            this.panelTitleBar.TabIndex = 1;
+            this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProducts.FlatAppearance.BorderSize = 0;
+            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducts.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProducts.Location = new System.Drawing.Point(0, 200);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnProducts.Size = new System.Drawing.Size(220, 60);
+            this.btnProducts.TabIndex = 3;
+            this.btnProducts.Text = "Baza produktów";
+            this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
-            // lblTitle
+            // btnCustomers
             // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(174, 24);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(215, 30);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "STRONA GŁÓWNA";
+            this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomers.FlatAppearance.BorderSize = 0;
+            this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomers.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCustomers.Location = new System.Drawing.Point(0, 140);
+            this.btnCustomers.Name = "btnCustomers";
+            this.btnCustomers.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCustomers.Size = new System.Drawing.Size(220, 60);
+            this.btnCustomers.TabIndex = 2;
+            this.btnCustomers.Text = "Baza klientów";
+            this.btnCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomers.UseVisualStyleBackColor = true;
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
+            // 
+            // btnShopping
+            // 
+            this.btnShopping.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShopping.FlatAppearance.BorderSize = 0;
+            this.btnShopping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShopping.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnShopping.Location = new System.Drawing.Point(0, 80);
+            this.btnShopping.Name = "btnShopping";
+            this.btnShopping.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnShopping.Size = new System.Drawing.Size(220, 60);
+            this.btnShopping.TabIndex = 1;
+            this.btnShopping.Text = "Zakupy";
+            this.btnShopping.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShopping.UseVisualStyleBackColor = true;
+            this.btnShopping.Click += new System.EventHandler(this.btnShopping_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.lblLogo);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.TabIndex = 0;
             // 
             // lblLogo
             // 
@@ -165,19 +143,42 @@
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "Smoki i Dzikie węże sp. z o.o.";
             // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.MediumOrchid;
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(962, 80);
+            this.panelTitleBar.TabIndex = 1;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(365, 24);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(215, 30);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "STRONA GŁÓWNA";
+            // 
             // panelDashboard
             // 
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(220, 80);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(580, 370);
+            this.panelDashboard.Size = new System.Drawing.Size(962, 673);
             this.panelDashboard.TabIndex = 2;
+            this.panelDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashboard_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);

@@ -12,16 +12,20 @@ namespace SmokiIDzikieWeze
         private string firstName;
         private string surname;
         private string email;
+        private static int NumberOfCustomers = 0;
 
-
-        Customer()
+        public Customer()
         {
 
         }
 
-        Customer(int customerId)
+        public Customer(string firstName, string surname, string email)
         {
-            CustomerId = customerId;
+            NumberOfCustomers += 1;
+            CustomerId = NumberOfCustomers;
+            FirstName = firstName;
+            Surname = surname;
+            Email = email;
         }
 
         public int CustomerId
@@ -49,7 +53,7 @@ namespace SmokiIDzikieWeze
         }
 
 
-        public string FullName() => FirstName + " " + Surname; 
-
+        public string FullName() => FirstName + " " + Surname;
+        
     }
 }

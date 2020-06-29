@@ -107,5 +107,10 @@ namespace SmokiIDzikieWeze.UI
         {
             OpenChildForm(new Forms.FormOrders(), sender);
         }
+
+        private void panelDashboard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
