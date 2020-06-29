@@ -19,10 +19,10 @@ namespace SmokiIDzikieWeze
 
         }
 
-        public Customer(string firstName, string surname, string email)
+        public Customer(int id, string firstName, string surname, string email)
         {
-            NumberOfCustomers += 1;
-            CustomerId = NumberOfCustomers;
+            //NumberOfCustomers += 1;
+            CustomerId = id;
             FirstName = firstName;
             Surname = surname;
             Email = email;

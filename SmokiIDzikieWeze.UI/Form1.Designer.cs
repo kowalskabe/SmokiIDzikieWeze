@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 
 namespace SmokiIDzikieWeze.UI
 {
+    
     partial class Form1
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>

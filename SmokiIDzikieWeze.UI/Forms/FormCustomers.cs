@@ -19,6 +19,7 @@ namespace SmokiIDzikieWeze.UI.Forms
             var repo = new CustomerRepository().Retrieve();
             listBoxListOfCustomers.DataSource = repo;
             HideSingleCustomerData();
+            
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -31,10 +32,6 @@ namespace SmokiIDzikieWeze.UI.Forms
             
         }
 
-        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void buttonDisplay_Click_1(object sender, EventArgs e)
         {
@@ -51,7 +48,7 @@ namespace SmokiIDzikieWeze.UI.Forms
         {
             HideSingleCustomerData();
             Customer customer = (Customer)listBoxListOfCustomers.SelectedItem;
-            int i = customer.CustomerId - 1;
+            int i = customer.CustomerId;
             
         }
         private void HideSingleCustomerData()
@@ -64,6 +61,13 @@ namespace SmokiIDzikieWeze.UI.Forms
             labelTitle2.Hide();
         }
 
-        
+
+
+        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
     }
 }
