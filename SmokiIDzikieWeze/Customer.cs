@@ -54,6 +54,10 @@ namespace SmokiIDzikieWeze
 
 
         public string FullName() => FirstName + " " + Surname;
-        
+
+        public override string ToString()
+        {
+            return $"{CustomerId}\t {FullName()}";
+        }
     }
 }

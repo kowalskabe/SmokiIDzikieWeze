@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmokiIDzikieWeze
 {
-    class Product
+    public class Product
     {
         private int productId;
         private decimal currentPrice;

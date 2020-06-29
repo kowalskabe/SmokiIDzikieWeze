@@ -56,6 +56,7 @@
             this.listBoxListOfCustomers.Name = "listBoxListOfCustomers";
             this.listBoxListOfCustomers.Size = new System.Drawing.Size(422, 524);
             this.listBoxListOfCustomers.TabIndex = 1;
+            this.listBoxListOfCustomers.SelectedIndexChanged += new System.EventHandler(this.listBoxListOfCustomers_SelectedIndexChanged);
             // 
             // buttonDisplay
             // 

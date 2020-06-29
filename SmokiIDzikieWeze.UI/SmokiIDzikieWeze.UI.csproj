@@ -143,5 +143,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmokiIDzikieWeze\SmokiIDzikieWeze.BL.csproj">
+      <Project>{3b43a15a-231f-442f-89d3-6c361dac3aaf}</Project>
+      <Name>SmokiIDzikieWeze.BL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
