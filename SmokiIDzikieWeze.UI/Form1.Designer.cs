@@ -1,4 +1,6 @@
-﻿namespace SmokiIDzikieWeze.UI
+﻿using System.Collections.Generic;
+
+namespace SmokiIDzikieWeze.UI
 {
     partial class Form1
     {
@@ -6,6 +8,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        
 
         /// <summary>
         /// Clean up any resources being used.
@@ -54,7 +57,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 753);
+            this.panelMenu.Size = new System.Drawing.Size(220, 703);
             this.panelMenu.TabIndex = 0;
             // 
             // btnOrders
@@ -62,6 +65,7 @@
             this.btnOrders.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOrders.FlatAppearance.BorderSize = 0;
             this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrders.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnOrders.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnOrders.Location = new System.Drawing.Point(0, 260);
             this.btnOrders.Name = "btnOrders";
@@ -78,6 +82,7 @@
             this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProducts.FlatAppearance.BorderSize = 0;
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducts.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnProducts.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnProducts.Location = new System.Drawing.Point(0, 200);
             this.btnProducts.Name = "btnProducts";
@@ -94,6 +99,7 @@
             this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomers.FlatAppearance.BorderSize = 0;
             this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomers.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnCustomers.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCustomers.Location = new System.Drawing.Point(0, 140);
             this.btnCustomers.Name = "btnCustomers";
@@ -110,6 +116,7 @@
             this.btnShopping.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnShopping.FlatAppearance.BorderSize = 0;
             this.btnShopping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShopping.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnShopping.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnShopping.Location = new System.Drawing.Point(0, 80);
             this.btnShopping.Name = "btnShopping";
@@ -150,7 +157,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(962, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(1062, 80);
             this.panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -159,7 +166,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(365, 24);
+            this.lblTitle.Location = new System.Drawing.Point(415, 24);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(215, 30);
             this.lblTitle.TabIndex = 0;
@@ -170,7 +177,7 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(220, 80);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(962, 673);
+            this.panelDashboard.Size = new System.Drawing.Size(1062, 623);
             this.panelDashboard.TabIndex = 2;
             this.panelDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashboard_Paint);
             // 
@@ -178,10 +185,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 753);
+            this.ClientSize = new System.Drawing.Size(1282, 703);
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.MaximumSize = new System.Drawing.Size(1300, 750);
+            this.MinimumSize = new System.Drawing.Size(1300, 750);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panelMenu.ResumeLayout(false);
@@ -205,6 +214,9 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Panel panelDashboard;
+ 
+       
+        
     }
 }
 

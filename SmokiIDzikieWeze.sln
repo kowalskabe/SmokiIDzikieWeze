@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmokiIDzikieWeze.BL", "Smok
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmokiIDzikieWeze.UI", "SmokiIDzikieWeze.UI\SmokiIDzikieWeze.UI.csproj", "{BC8F7D90-EA89-486E-A53A-E0F8928EA037}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{56E15C1E-5F90-4ADB-ABB9-1793AA064E40}"
+	ProjectSection(SolutionItems) = preProject
+		CustomersDb.xml = CustomersDb.xml
+		ProductsDb.xml = ProductsDb.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

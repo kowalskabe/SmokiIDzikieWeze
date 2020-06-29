@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product id="1">
+    <productName>"Wiedźmikołaj"</productName>
+    <currentPrice>39.99</currentPrice>
+    <productDescription>"Pratchet Pratchet Pratchet Pratchet Pratchet"</productDescription>
+  </product>
+</products>

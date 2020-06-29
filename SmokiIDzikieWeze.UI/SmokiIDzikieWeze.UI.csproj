@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressesRepositoryDB.cs">
+      <DependentUpon>SmokiIDzikieWezeDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersRepositoryDB.cs">
+      <DependentUpon>SmokiIDzikieWezeDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +91,6 @@
     <Compile Include="Forms\FormProducts.Designer.cs">
       <DependentUpon>FormProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ListOfCustomersView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\ListOfCustomersView.Designer.cs">
-      <DependentUpon>ListOfCustomersView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ListOfProductsView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,14 +103,23 @@
     <Compile Include="Forms\Single ProductView_book.Designer.cs">
       <DependentUpon>Single ProductView_book.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SingleCustomerView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\SingleCustomerView.Designer.cs">
-      <DependentUpon>SingleCustomerView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmokiIDzikieWezeDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmokiIDzikieWezeDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmokiIDzikieWezeDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmokiIDzikieWezeDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmokiIDzikieWezeDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmokiIDzikieWezeDb.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -118,17 +136,11 @@
     <EmbeddedResource Include="Forms\FormShopping.resx">
       <DependentUpon>FormShopping.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ListOfCustomersView.resx">
-      <DependentUpon>ListOfCustomersView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListOfProductsView.resx">
       <DependentUpon>ListOfProductsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Single ProductView_book.resx">
       <DependentUpon>Single ProductView_book.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SingleCustomerView.resx">
-      <DependentUpon>SingleCustomerView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +151,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\SmokiIDzikieWeze.CustomerRepository.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,6 +162,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="SmokiIDzikieWezeDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SmokiIDzikieWezeDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SmokiIDzikieWezeDb.edmx.diagram">
+      <DependentUpon>SmokiIDzikieWezeDb.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -157,6 +178,21 @@
       <Project>{3b43a15a-231f-442f-89d3-6c361dac3aaf}</Project>
       <Name>SmokiIDzikieWeze.BL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SmokiIDzikieWezeDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SmokiIDzikieWezeDb.Context.cs</LastGenOutput>
+      <DependentUpon>SmokiIDzikieWezeDb.edmx</DependentUpon>
+    </Content>
+    <Content Include="SmokiIDzikieWezeDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SmokiIDzikieWezeDb.edmx</DependentUpon>
+      <LastGenOutput>SmokiIDzikieWezeDb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

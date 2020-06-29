@@ -15,15 +15,55 @@ namespace SmokiIDzikieWeze.UI.Forms
         public FormCustomers()
         {
             InitializeComponent();
-            var panel1 = new Forms.ListOfCustomersView();
-            var panel2 = new Forms.SingleCustomerView();
-            this.splitContainer1.Panel1.Controls.Add(panel1);
-            //this.splitContainer1.Panel2.Controls.Add(panel2);
+            
+            var repo = new CustomerRepository().Retrieve();
+            listBoxListOfCustomers.DataSource = repo;
+            HideSingleCustomerData();
         }
 
-       private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
        {
         //
        }
+
+        private void buttonDisplay_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonDisplay_Click_1(object sender, EventArgs e)
+        {
+            Customer customer = (Customer)listBoxListOfCustomers.SelectedItem;
+            labelTitle2.Show();
+            labelCustomerFullName.Text = customer.FullName();
+            labelId.Show();
+            labelCustomerId.Text = customer.CustomerId.ToString();
+            labelEmail.Show();
+            labelCustomerEmail.Text = customer.Email;
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            HideSingleCustomerData();
+            Customer customer = (Customer)listBoxListOfCustomers.SelectedItem;
+            int i = customer.CustomerId - 1;
+            
+        }
+        private void HideSingleCustomerData()
+        {
+            labelCustomerFullName.Text = "";
+            labelId.Hide();
+            labelCustomerId.Text = "";
+            labelEmail.Hide();
+            labelCustomerEmail.Text = "";
+            labelTitle2.Hide();
+        }
+
+        
     }
 }

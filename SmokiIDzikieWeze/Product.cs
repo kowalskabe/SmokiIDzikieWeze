@@ -13,7 +13,7 @@ namespace SmokiIDzikieWeze
         private double currentPrice;
         private string productName;
         private string productDescription;
-        private static int NumberOfProducts = 0;
+        public static int NumberOfProducts = 0;
 
         public Product() 
         { 
