@@ -18,16 +18,12 @@ namespace SmokiIDzikieWeze.UI.Forms
             var panel1 = new Forms.ListOfCustomersView();
             var panel2 = new Forms.SingleCustomerView();
             this.splitContainer1.Panel1.Controls.Add(panel1);
-            this.splitContainer1.Panel2.Controls.Add(panel2);
+            //this.splitContainer1.Panel2.Controls.Add(panel2);
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-            var panel1 = new Forms.ListOfCustomersView();
-            var panel2 = new Forms.SingleCustomerView();
-            this.splitContainer1.Panel1.Controls.Add(panel1);
-            this.splitContainer1.Panel2.Controls.Add(panel2);
-
-        }
+       private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+       {
+        //
+       }
     }
 }

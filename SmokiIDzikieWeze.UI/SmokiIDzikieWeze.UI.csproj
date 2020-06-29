@@ -82,6 +82,12 @@
     <Compile Include="Forms\ListOfCustomersView.Designer.cs">
       <DependentUpon>ListOfCustomersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ListOfProductsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ListOfProductsView.Designer.cs">
+      <DependentUpon>ListOfProductsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SingleCustomerView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListOfCustomersView.resx">
       <DependentUpon>ListOfCustomersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListOfProductsView.resx">
+      <DependentUpon>ListOfProductsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SingleCustomerView.resx">
       <DependentUpon>SingleCustomerView.cs</DependentUpon>

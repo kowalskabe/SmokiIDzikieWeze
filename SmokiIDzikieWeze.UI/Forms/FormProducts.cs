@@ -15,6 +15,13 @@ namespace SmokiIDzikieWeze.UI.Forms
         public FormProducts()
         {
             InitializeComponent();
+            var panel1 = new Forms.ListOfProductsView();
+            this.splitContainer1.Panel1.Controls.Add(panel1);
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
