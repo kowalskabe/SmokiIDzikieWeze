@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace SmokiIDzikieWeze
 {
-    public class Product
+    public abstract class Product
     {
-        private int productId;
-        private double currentPrice;
-        private string productName;
-        private string productDescription;
+        internal protected int productId;
+        internal protected double currentPrice;
+        internal protected string productName;
+        internal protected string productDescription;
         public static int NumberOfProducts = 0;
 
         public Product() 
@@ -21,7 +21,7 @@ namespace SmokiIDzikieWeze
 
         public Product(string productName, double currentPrice, string productDescription)
         {
-            NumberOfProducts += 1;
+            //NumberOfProducts += 1;
             ProductId = NumberOfProducts;
             this.productName = productName;
             this.productDescription = productDescription;
@@ -53,9 +53,12 @@ namespace SmokiIDzikieWeze
             set { productDescription = value; }
         }
 
+
+        public abstract void Info();
+
         public override string ToString()
         {
-            return $"{ProductId}\t {ProductName}";
+            return $"{productId}\t{productName}";
         }
     }
 }

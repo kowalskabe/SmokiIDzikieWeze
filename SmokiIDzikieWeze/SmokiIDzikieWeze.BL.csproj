@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="Book.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerRepository.cs" />
+    <Compile Include="Ebook.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
