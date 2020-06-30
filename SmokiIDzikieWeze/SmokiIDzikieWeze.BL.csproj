@@ -47,7 +47,7 @@
     <Compile Include="CustomerRepository.cs" />
     <Compile Include="Ebook.cs" />
     <Compile Include="IPersonRepository.cs" />
-    <Compile Include="IProductRpositorycs.cs" />
+    <Compile Include="IProductRpository.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
     <Compile Include="Product.cs" />

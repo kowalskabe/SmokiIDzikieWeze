@@ -9,7 +9,7 @@ namespace SmokiIDzikieWeze
     interface IProductRepository
     {
         List<Product> Retrieve();
-        List<Product> Add(Product newProduct);
+        List<Product> Add(Product newProduct, int type);
         List<Product> Delete(int i);
         List<Product> Update(Product editedCustomer);
     }

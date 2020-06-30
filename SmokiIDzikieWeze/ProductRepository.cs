@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Versioning;
 using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 using System.IO;
@@ -32,15 +29,105 @@ namespace SmokiIDzikieWeze
         }
 
 
-        public List<Product> Add(Product newProduct)
+        public List<Product> Add(Product newProduct, int type)
         {
-            throw new NotImplementedException();
+
+            XElement doc = XElement.Load("Products.xml");
+            IEnumerable<XElement> products =
+                from product in doc.Elements("Product")
+                select product;
+
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                Encoding = Encoding.Unicode,
+                Indent = true
+            };
+
+            //starting data
+            using (XmlWriter writer = XmlWriter.Create("Products.xml", settings))
+            {
+                writer.WriteStartElement("Products");
+                foreach (XElement product in products)
+                {
+                    writer.WriteStartElement("Product");
+
+                    writer.WriteAttributeString("productId", product.Attribute("productId").Value);
+
+                    writer.WriteStartElement("productType");
+                    writer.WriteString(product.Element("productType").Value);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("productName");
+                    writer.WriteString(product.Element("productName").Value);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("currentPrice");
+                    writer.WriteString(product.Element("currentPrice").Value);
+                    writer.WriteEndElement();
+       
+
+                    writer.WriteStartElement("description");
+                    writer.WriteString(product.Element("description").Value);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("number");
+                    writer.WriteString(product.Element("number").Value);
+                    writer.WriteEndElement();
+                    writer.WriteEndElement();
+                }
+                writer.WriteStartElement("Product");
+
+                writer.WriteAttributeString("productId", Product.NumberOfProducts.ToString());
+
+                writer.WriteStartElement("productType");
+                if (type == 0) writer.WriteString("Book");
+                else writer.WriteString("Ebook");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("productName");
+                writer.WriteString(newProduct.ProductName);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("currentPrice");
+                writer.WriteString(newProduct.CurrentPrice.ToString());
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("description");
+                writer.WriteString(newProduct.productDescription);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("number");
+                writer.WriteString(newProduct.Value());
+                writer.WriteEndElement();
+
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.Close();
+
+            }
+
+            LoadXml("Products.xml");
+
+            return Retrieve();
         }
 
 
         public List<Product> Delete(int i)
         {
-            throw new NotImplementedException();
+            XDocument doc = XDocument.Load("Products.xml");
+
+            XElement product =
+                (from prod in doc.Descendants("Product")
+                 where prod.Attribute("productId").Value == i.ToString()
+                 select prod).SingleOrDefault();
+
+            if (product != null)
+            {
+                product.Remove();
+            }
+            doc.Save("Products.xml");
+
+            return Retrieve();
         }
 
         public Product Retrieve(int productId)
@@ -69,9 +156,9 @@ namespace SmokiIDzikieWeze
 
             foreach (XElement product in products)
             {
-                //sb.AppendLine(product.Element("surname").Value);
+                sb.AppendLine(product.Element("productName").Value);
                 int id = Int32.Parse(product.Attribute("productId").Value);
-                if (product.Element("productType").Value == "Book")
+                if (  product.Element("productType").Value == "Book")
                 {
                     var record = new Book(id, product.Element("productName").Value, Double.Parse(product.Element("currentPrice").Value), product.Element("description").Value, int.Parse(product.Element("number").Value));
                     productsRepository.Add(record);

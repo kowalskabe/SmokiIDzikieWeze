@@ -26,6 +26,8 @@ namespace SmokiIDzikieWeze
                 NumberOfProducts += 1;
             }
         }
+
+        public override string Value() => this.duration.ToString();
         public override string Info() => $"Tytuł: {productName}\nTyp: Ebook\nCzas trwania: {duration}min\nCena: {currentPrice}\n\nOpis:\n{ProductDescription}";
     }
 }

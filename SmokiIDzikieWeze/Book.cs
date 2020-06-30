@@ -34,6 +34,7 @@ namespace SmokiIDzikieWeze
         //     set { productId = value; }
         // }
 
+        public override string Value() => this.liczbaStron.ToString();
         public override string Info() => $"Tytuł: {productName}\nTyp: książka\nIlość stron: {liczbaStron}\nCena: {currentPrice}\n\nOpis:\n{ProductDescription}";
     }
 }
