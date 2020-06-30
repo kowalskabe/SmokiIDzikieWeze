@@ -85,18 +85,6 @@
     <Compile Include="Forms\FormProducts.Designer.cs">
       <DependentUpon>FormProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ListOfProductsView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\ListOfProductsView.Designer.cs">
-      <DependentUpon>ListOfProductsView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Single ProductView_book.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Single ProductView_book.Designer.cs">
-      <DependentUpon>Single ProductView_book.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
@@ -114,12 +102,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormShopping.resx">
       <DependentUpon>FormShopping.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ListOfProductsView.resx">
-      <DependentUpon>ListOfProductsView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Single ProductView_book.resx">
-      <DependentUpon>Single ProductView_book.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -42,6 +42,7 @@ namespace SmokiIDzikieWeze.UI.Forms
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonDisplay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle4 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.labelTitle3 = new System.Windows.Forms.Label();
             this.lbl1ToTextBox = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@ namespace SmokiIDzikieWeze.UI.Forms
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelId = new System.Windows.Forms.Label();
             this.labelCustomerFullName = new System.Windows.Forms.Label();
-            this.labelTitle4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -109,6 +109,7 @@ namespace SmokiIDzikieWeze.UI.Forms
             // 
             this.panelTitle.Controls.Add(this.labelTitle1);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(610, 100);
@@ -219,6 +220,18 @@ namespace SmokiIDzikieWeze.UI.Forms
             this.label1.Size = new System.Drawing.Size(161, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "LISTA KLIENTÓW";
+            // 
+            // labelTitle4
+            // 
+            this.labelTitle4.AutoSize = true;
+            this.labelTitle4.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTitle4.ForeColor = System.Drawing.Color.Black;
+            this.labelTitle4.Location = new System.Drawing.Point(35, 25);
+            this.labelTitle4.Name = "labelTitle4";
+            this.labelTitle4.Size = new System.Drawing.Size(56, 21);
+            this.labelTitle4.TabIndex = 25;
+            this.labelTitle4.Text = "NOWY";
+            this.labelTitle4.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonSave
             // 
@@ -371,18 +384,6 @@ namespace SmokiIDzikieWeze.UI.Forms
             this.labelCustomerFullName.Size = new System.Drawing.Size(375, 27);
             this.labelCustomerFullName.TabIndex = 10;
             this.labelCustomerFullName.Text = "{{ IN CODE }}";
-            // 
-            // labelTitle4
-            // 
-            this.labelTitle4.AutoSize = true;
-            this.labelTitle4.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle4.ForeColor = System.Drawing.Color.Black;
-            this.labelTitle4.Location = new System.Drawing.Point(35, 25);
-            this.labelTitle4.Name = "labelTitle4";
-            this.labelTitle4.Size = new System.Drawing.Size(56, 21);
-            this.labelTitle4.TabIndex = 25;
-            this.labelTitle4.Text = "NOWY";
-            this.labelTitle4.Click += new System.EventHandler(this.label2_Click);
             // 
             // FormCustomers
             // 

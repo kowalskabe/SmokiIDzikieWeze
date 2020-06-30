@@ -36,6 +36,8 @@ namespace SmokiIDzikieWeze.UI
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnOrders = new System.Windows.Forms.Button();
+            //tmp
+            this.btnOrders.Hide();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnShopping = new System.Windows.Forms.Button();
@@ -44,9 +46,13 @@ namespace SmokiIDzikieWeze.UI
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDashboard = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelAuthor1 = new System.Windows.Forms.Label();
+            this.labelAuthors = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            this.panelDashboard.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -177,12 +183,48 @@ namespace SmokiIDzikieWeze.UI
             // 
             // panelDashboard
             // 
+            this.panelDashboard.Controls.Add(this.label2);
+            this.panelDashboard.Controls.Add(this.labelAuthor1);
+            this.panelDashboard.Controls.Add(this.labelAuthors);
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(220, 80);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(1062, 623);
             this.panelDashboard.TabIndex = 2;
             this.panelDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashboard_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(70, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(244, 30);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Mateusz Janas gr. B1";
+            // 
+            // labelAuthor1
+            // 
+            this.labelAuthor1.AutoSize = true;
+            this.labelAuthor1.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelAuthor1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelAuthor1.Location = new System.Drawing.Point(70, 60);
+            this.labelAuthor1.Name = "labelAuthor1";
+            this.labelAuthor1.Size = new System.Drawing.Size(304, 30);
+            this.labelAuthor1.TabIndex = 1;
+            this.labelAuthor1.Text = "Barbara Kowalska gr. B2.1";
+            // 
+            // labelAuthors
+            // 
+            this.labelAuthors.AutoSize = true;
+            this.labelAuthors.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelAuthors.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelAuthors.Location = new System.Drawing.Point(44, 20);
+            this.labelAuthors.Name = "labelAuthors";
+            this.labelAuthors.Size = new System.Drawing.Size(115, 30);
+            this.labelAuthors.TabIndex = 0;
+            this.labelAuthors.Text = "AUTORZY";
             // 
             // Form1
             // 
@@ -201,6 +243,8 @@ namespace SmokiIDzikieWeze.UI
             this.panelLogo.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            this.panelDashboard.ResumeLayout(false);
+            this.panelDashboard.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -217,9 +261,9 @@ namespace SmokiIDzikieWeze.UI
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Panel panelDashboard;
- 
-       
-        
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelAuthor1;
+        private System.Windows.Forms.Label labelAuthors;
     }
 }
 

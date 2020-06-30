@@ -15,13 +15,20 @@ namespace SmokiIDzikieWeze.UI.Forms
         public FormProducts()
         {
             InitializeComponent();
-            var panel1 = new Forms.ListOfProductsView();
-            this.splitContainer1.Panel1.Controls.Add(panel1);
+            var repo = new ProductRepository().Retrieve();
+            listBoxListOfProducts.DataSource = repo;
+            //HideSingleCustomerData();
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void listBoxListOfProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Product product = (Product)listBoxListOfProducts.SelectedItem;
+            richTextBoxInfo.Text = product.Info();
         }
     }
 }
