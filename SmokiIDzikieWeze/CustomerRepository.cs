@@ -70,12 +70,6 @@ namespace SmokiIDzikieWeze
         
         
         
-        public void CreateXmlString()
-        {
-            
-        }
-
-  
 
         public List<Customer> Add(Customer newCustomer)
         {

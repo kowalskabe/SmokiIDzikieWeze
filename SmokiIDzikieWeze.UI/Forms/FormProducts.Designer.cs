@@ -33,6 +33,9 @@
             this.labelTitle1 = new System.Windows.Forms.Label();
             this.listBoxListOfProducts = new System.Windows.Forms.ListBox();
             this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -48,6 +51,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.buttonAdd);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonUpdate);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonRemove);
             this.splitContainer1.Panel1.Controls.Add(this.listBoxListOfProducts);
             this.splitContainer1.Panel1.Controls.Add(this.panelTitle);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
@@ -100,6 +106,45 @@
             this.richTextBoxInfo.TabIndex = 11;
             this.richTextBoxInfo.Text = "";
             // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonRemove.FlatAppearance.BorderSize = 0;
+            this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemove.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonRemove.Location = new System.Drawing.Point(12, 444);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(118, 32);
+            this.buttonRemove.TabIndex = 15;
+            this.buttonRemove.Text = "Usuń";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonUpdate.FlatAppearance.BorderSize = 0;
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonUpdate.Location = new System.Drawing.Point(166, 444);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(123, 32);
+            this.buttonUpdate.TabIndex = 16;
+            this.buttonUpdate.Text = "Edytuj";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonAdd.FlatAppearance.BorderSize = 0;
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonAdd.Location = new System.Drawing.Point(326, 444);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(114, 32);
+            this.buttonAdd.TabIndex = 17;
+            this.buttonAdd.Text = "Dodaj";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            // 
             // FormProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -125,5 +170,8 @@
         private System.Windows.Forms.Label labelTitle1;
         protected internal System.Windows.Forms.ListBox listBoxListOfProducts;
         private System.Windows.Forms.RichTextBox richTextBoxInfo;
+        protected internal System.Windows.Forms.Button buttonRemove;
+        protected internal System.Windows.Forms.Button buttonUpdate;
+        protected internal System.Windows.Forms.Button buttonAdd;
     }
 }

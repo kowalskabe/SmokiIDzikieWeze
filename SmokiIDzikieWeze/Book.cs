@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace SmokiIDzikieWeze
 {
-    class Book : Product
+    public class Book : Product
     {
         private int liczbaStron;
         //private int productId;
         public Book()
         { }
 
-        public Book(string productName, double currentPrice, string productDescription, int liczbaStron) : base( productName,  currentPrice,  productDescription)
+        public Book(int id, string productName, double currentPrice, string productDescription, int liczbaStron) : base( productName,  currentPrice,  productDescription)
         {
-            NumberOfProducts += 1;
-            productId = NumberOfProducts;
+            //NumberOfProducts += 1;
+            this.productId = id;
             this.productName = productName;
             this.productDescription = productDescription;
             this.currentPrice = currentPrice;
             this.liczbaStron = liczbaStron;
+            if (NumberOfProducts < this.productId)
+            {
+                NumberOfProducts += 1;
+            }
         }
 
 

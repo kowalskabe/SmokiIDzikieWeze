@@ -29,6 +29,7 @@ namespace SmokiIDzikieWeze
             {
                 lastId += 1;
             }
+
         }
 
         public int CustomerId
