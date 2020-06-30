@@ -50,6 +50,9 @@ namespace SmokiIDzikieWeze.UI.Forms
             Customer customer = (Customer)listBoxListOfCustomers.SelectedItem;
             int i = customer.CustomerId;
             
+            var repo = new CustomerRepository().Delete(i);
+            listBoxListOfCustomers.DataSource = repo;
+            HideSingleCustomerData();
         }
         private void HideSingleCustomerData()
         {

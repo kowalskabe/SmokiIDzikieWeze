@@ -40,6 +40,7 @@ namespace SmokiIDzikieWeze
         {
             LoadXml("Customers.xml");
             GetAll();
+           // Add();
             return customersRepository;
         }
         
@@ -69,77 +70,16 @@ namespace SmokiIDzikieWeze
         
         
         
-        public string CreateXmlString()
+        public void CreateXmlString()
         {
-            XmlDocument doc = new XmlDocument();
             
-            StringBuilder sb = new StringBuilder();
-            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
-            {
-                sb.Append(char.ToUpper(node.Name[0]));
-                sb.Append(node.Name.Substring(1));
-                sb.Append(" ");
-                sb.AppendLine(node.InnerText);
-            }
-            return sb.ToString();
-            //@"<Customers>
-                 //       <Customer>
-                 //           <customerId>1</customerId>
-                 //           <firstName>Barbara</firstName>
-                 //           <surname>Kowalska</surname>
-                 //           <email>kowalskab@gmail.com</email>
-                 //       </Customer>
-                 //       <Customer>
-                 //           <customerId>2</customerId>
-                 //           <firstName>Michał</firstName>
-                 //           <surname>Kułaczkowski</surname>
-                 //           <email>kulaczkowskim@gmail.com</email>
-                 //       </Customer>
-                 //       <Customer>
-                 //           <customerId>3</customerId>
-                 //           <firstName>Michalina</firstName>
-                 //           <surname>Kulaczkowska</surname>
-                 //           <email>kulaczkowskam@gmail.com</email>
-                 //       </Customer>
-                 //       <Customer>
-                 //           <customerId>4</customerId>
-                 //           <firstName>Ewa</firstName>
-                 //           <surname>Kowalska</surname>
-                 //           <email>kowalskae@gmail.com</email>
-                 //       </Customer>
-                 //   </Customers>";
         }
 
-        public void BuildXmlDocument()
-        {
-            XDocument doc = 
-            new XDocument(
-                new XDeclaration("1.0", "utf-8", "yes"),
-                new XDocument("Customer Repository"),
-                new XElement("Customers",
-                    new XElement("Customer",     
-                        new XElement("customerId", 1),
-                        new XElement("firstName", "Barbara"),
-                        new XElement("surname", "Kowalska"),
-                        new XElement("email", "kowalskab@gmail.com")))
-                );
-            ResultText = doc.ToString();
-        }
-
-        public string LoadString()
-        {
-            string xml = CreateXmlString();
-            XDocument doc = XDocument.Parse(xml);
-            ResultText = doc.ToString();
-            return ResultText;
-        }
+  
 
         public void Add()
         {
-            string xml = CreateXmlString();
-
-            XDocument doc = XDocument.Parse(xml);
-
+          
             XElement customer =
                 new XElement("Customer",
                     new XElement("customerId", 5),
@@ -147,52 +87,34 @@ namespace SmokiIDzikieWeze
                         new XElement("surname", "Brzęczyszczykiewicz"),
                         new XElement("email", "brzeczyszczykiewiczg@gmail.com")
                         );
-
-            doc.Root.Add(customer);
-            ResultText = doc.ToString();
         }
 
         public void Update()
         {
-            string xml = CreateXmlString();
-            XDocument doc = XDocument.Parse(xml);
-
-            XElement customer =
-                (from cust in doc.Descendants("Customer")
-                 where cust.Element("customerId").Value == "1"
-                 select cust).SingleOrDefault();
-
-            customer.Element("firstName").Value = "Basia";
-
-            ResultText = doc.ToString();
+            
         }
 
         
-        public void Delete()
+        public List<Customer> Delete(int i)
         {
-            string xml = CreateXmlString();
-            XDocument doc = XDocument.Parse(xml);
+           
+            XDocument doc = XDocument.Load("Customers.xml");
 
             XElement customer =
                 (from cust in doc.Descendants("Customer")
-                 where cust.Element("customerId").Value == "1"
+                 where cust.Attribute("customerId").Value == i.ToString()
                  select cust).SingleOrDefault();
 
             if (customer != null)
             {
                 customer.Remove();
             }
+            doc.Save("Customers.xml");
 
-            ResultText = doc.ToString();
+            return Retrieve();
         }
 
-        public void XDocSave(string FileName)
-        {
-            string xml = CreateXmlString();
-            XDocument doc = XDocument.Parse(xml);
-            doc.Save(FileName);
-            ResultText = doc.ToString();
-        }
+    
 
         public void XmlWriterFormattingSave(string XmlFileName)
         {
@@ -249,13 +171,13 @@ namespace SmokiIDzikieWeze
             }
         }
 
-        public void LoadXml(string FileName)
+        public void LoadXml(string XmlFileName)
         {
             XDocument doc = new XDocument();
 
-            if (!File.Exists(FileName))
+            if (!File.Exists(XmlFileName))
             {
-                XmlWriterFormattingSave(FileName);
+                XmlWriterFormattingSave(XmlFileName);
             }
         }
 
