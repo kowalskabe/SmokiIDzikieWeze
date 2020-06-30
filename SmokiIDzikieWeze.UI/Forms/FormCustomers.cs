@@ -22,16 +22,7 @@ namespace SmokiIDzikieWeze.UI.Forms
             
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-       {
-        //
-       }
-
-        private void buttonDisplay_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+     
 
         private void buttonDisplay_Click_1(object sender, EventArgs e)
         {
@@ -53,7 +44,16 @@ namespace SmokiIDzikieWeze.UI.Forms
             var repo = new CustomerRepository().Delete(i);
             listBoxListOfCustomers.DataSource = repo;
             HideSingleCustomerData();
+            Console.WriteLine(Customer.lastId);
         }
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            HideSingleCustomerData();
+            Customer temp = new Customer(Customer.lastId + 1, "Grzegorz", "Brzęczyszczykiewicz", "brzeczyszczykiewiczg@gmail.com");
+            var repo = new CustomerRepository().Add(temp);
+            listBoxListOfCustomers.DataSource = repo;
+        }
+        
         private void HideSingleCustomerData()
         {
             labelCustomerFullName.Text = "";
@@ -66,11 +66,22 @@ namespace SmokiIDzikieWeze.UI.Forms
 
 
 
+
+
+
         private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+            //
+        }
+        private void buttonDisplay_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        
     }
 }

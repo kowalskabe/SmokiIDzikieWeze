@@ -12,8 +12,7 @@ namespace SmokiIDzikieWeze
         private string firstName;
         private string surname;
         private string email;
-        private static int NumberOfCustomers = 0;
-
+        public static int lastId = 0;
         public Customer()
         {
 
@@ -22,10 +21,14 @@ namespace SmokiIDzikieWeze
         public Customer(int id, string firstName, string surname, string email)
         {
             //NumberOfCustomers += 1;
-            CustomerId = id;
-            FirstName = firstName;
-            Surname = surname;
-            Email = email;
+            this.customerId = id;
+            this.firstName = firstName;
+            this.surname = surname;
+            this.email = email;
+            if (lastId < this.customerId)
+            {
+                lastId += 1;
+            }
         }
 
         public int CustomerId

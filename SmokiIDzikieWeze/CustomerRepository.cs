@@ -77,16 +77,67 @@ namespace SmokiIDzikieWeze
 
   
 
-        public void Add()
+        public List<Customer> Add(Customer newCustomer)
         {
-          
-            XElement customer =
-                new XElement("Customer",
-                    new XElement("customerId", 5),
-                        new XElement("firstName", "Grzegorz"),
-                        new XElement("surname", "Brzęczyszczykiewicz"),
-                        new XElement("email", "brzeczyszczykiewiczg@gmail.com")
-                        );
+
+            XElement doc = XElement.Load("Customers.xml");
+            IEnumerable<XElement> customers =
+                from customer in doc.Elements("Customer")
+                select customer;
+
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                Encoding = Encoding.Unicode,
+                Indent = true
+            };
+
+            //starting data
+            using (XmlWriter writer = XmlWriter.Create("Customers.xml", settings))
+            {
+                writer.WriteStartElement("Customers");
+                foreach (XElement customer in customers)
+                {
+                    writer.WriteStartElement("Customer");
+
+                    writer.WriteAttributeString("customerId", customer.Attribute("customerId").Value);
+
+                    writer.WriteStartElement("firstName");
+                    writer.WriteString(customer.Element("firstName").Value);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("surname");
+                    writer.WriteString(customer.Element("surname").Value);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("email");
+                    writer.WriteString(customer.Element("firstName").Value);
+                    writer.WriteEndElement();
+                    writer.WriteEndElement();
+                }
+                writer.WriteStartElement("Customer");
+
+                writer.WriteAttributeString("customerId", Customer.lastId.ToString());
+
+                writer.WriteStartElement("firstName");
+                writer.WriteString(newCustomer.FirstName);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("surname");
+                writer.WriteString(newCustomer.Surname);
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("email");
+                writer.WriteString(newCustomer.Email);
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.Close();
+                
+            }
+
+            LoadXml("Customers.xml");
+
+            return Retrieve();
         }
 
         public void Update()
@@ -115,7 +166,7 @@ namespace SmokiIDzikieWeze
         }
 
     
-
+        //data for start
         public void XmlWriterFormattingSave(string XmlFileName)
         {
             XmlWriterSettings settings = new XmlWriterSettings
@@ -141,7 +192,7 @@ namespace SmokiIDzikieWeze
                 writer.WriteEndElement();
 
                 writer.WriteStartElement("email");
-                writer.WriteString("stojakK@gmail.com");
+                writer.WriteString("stojakk@gmail.com");
                 writer.WriteEndElement();
                 writer.WriteEndElement();
 
@@ -154,11 +205,96 @@ namespace SmokiIDzikieWeze
                 writer.WriteEndElement();
 
                 writer.WriteStartElement("surname");
-                writer.WriteString("Stojak");
+                writer.WriteString("Czarnecka");
                 writer.WriteEndElement();
 
                 writer.WriteStartElement("email");
-                writer.WriteString("stojakK@gmail.com");
+                writer.WriteString("czarnecka@gmail.com");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("Customer");
+
+                writer.WriteAttributeString("customerId", "3");
+
+                writer.WriteStartElement("firstName");
+                writer.WriteString("Joanna");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("surname");
+                writer.WriteString("Pawłowska");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("email");
+                writer.WriteString("pawlowskaj@gmail.com");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("Customer");
+
+                writer.WriteAttributeString("customerId", "4");
+
+                writer.WriteStartElement("firstName");
+                writer.WriteString("Sylwia");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("surname");
+                writer.WriteString("Czupajło");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("email");
+                writer.WriteString("czupajlos@gmail.com");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("Customer");
+
+                writer.WriteAttributeString("customerId", "5");
+
+                writer.WriteStartElement("firstName");
+                writer.WriteString("Ewa");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("surname");
+                writer.WriteString("Kowalska");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("email");
+                writer.WriteString("kowalskae@gmail.com");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("Customer");
+
+                writer.WriteAttributeString("customerId", "6");
+
+                writer.WriteStartElement("firstName");
+                writer.WriteString("Barbara");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("surname");
+                writer.WriteString("Kowalska");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("email");
+                writer.WriteString("kowalskab@gmail.com");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("Customer");
+
+                writer.WriteAttributeString("customerId", "7");
+
+                writer.WriteStartElement("firstName");
+                writer.WriteString("Mateusz");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("surname");
+                writer.WriteString("Janas");
+                writer.WriteEndElement();
+
+                writer.WriteStartElement("email");
+                writer.WriteString("janasm@gmail.com");
                 writer.WriteEndElement();
                 writer.WriteEndElement();
 
