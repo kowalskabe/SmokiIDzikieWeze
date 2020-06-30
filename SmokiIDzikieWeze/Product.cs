@@ -54,7 +54,7 @@ namespace SmokiIDzikieWeze
         }
 
 
-        public abstract void Info();
+        public abstract string Info();
 
         public override string ToString()
         {

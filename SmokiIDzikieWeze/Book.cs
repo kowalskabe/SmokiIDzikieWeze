@@ -23,16 +23,13 @@ namespace SmokiIDzikieWeze
             this.liczbaStron = liczbaStron;
         }
 
-        
-      // public new int ProductId
-      // {
-      //     get { return productId; }
-      //     set { productId = value; }
-      // }
 
-        public override void Info()
-        {
-            throw new NotImplementedException();
-        }
+        // public new int ProductId
+        // {
+        //     get { return productId; }
+        //     set { productId = value; }
+        // }
+
+        public override string Info() => $"Tytuł: {productName}\nTyp: książka\nIlość stron: {liczbaStron}\nCena: {currentPrice}\n\nOpis:\n{ProductDescription}";
     }
 }

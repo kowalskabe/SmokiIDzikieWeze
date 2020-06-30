@@ -22,9 +22,6 @@ namespace SmokiIDzikieWeze
             this.currentPrice = currentPrice;
             this.duration = duration;
         }
-        public override void Info()
-        {
-            throw new NotImplementedException();
-        }
+        public override string Info() => $"Tytuł: {productName}\nTyp: Ebook\nCzas trwania: {duration}min\nCena: {currentPrice}\n\nOpis:\n{ProductDescription}";
     }
 }
