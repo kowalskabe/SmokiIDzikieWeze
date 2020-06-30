@@ -11,9 +11,9 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace SmokiIDzikieWeze
+namespace SmokiIDzikieWeze 
 {
-    public class CustomerRepository
+    public class CustomerRepository : IPersonRepository
     {
         private List<Customer> customersRepository = new List<Customer>();
         
@@ -140,9 +140,25 @@ namespace SmokiIDzikieWeze
             return Retrieve();
         }
 
-        public void Update()
+        public List<Customer> Update(Customer editedCustomer)
         {
+            XDocument doc = XDocument.Load("Customers.xml");
+            int i = editedCustomer.CustomerId;
             
+            XElement customer =
+                (from cust in doc.Descendants("Customer")
+                 where cust.Attribute("customerId").Value == i.ToString()
+                 select cust).SingleOrDefault();
+
+            if (customer != null)
+            {
+                customer.Element("firstName").Value = editedCustomer.FirstName;
+                customer.Element("surname").Value = editedCustomer.Surname;
+                customer.Element("email").Value = editedCustomer.Email;
+            }
+            
+            doc.Save("Customers.xml");
+            return Retrieve();
         }
 
         

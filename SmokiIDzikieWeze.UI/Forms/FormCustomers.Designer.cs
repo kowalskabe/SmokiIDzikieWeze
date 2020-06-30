@@ -42,12 +42,23 @@ namespace SmokiIDzikieWeze.UI.Forms
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonDisplay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.labelTitle3 = new System.Windows.Forms.Label();
+            this.lbl1ToTextBox = new System.Windows.Forms.Label();
+            this.lbl2ToTextBox = new System.Windows.Forms.Label();
+            this.lbl3ToTextBox = new System.Windows.Forms.Label();
+            this.lbl4ToTextBox = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.labelTitle2 = new System.Windows.Forms.Label();
             this.labelCustomerEmail = new System.Windows.Forms.Label();
             this.labelCustomerId = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelId = new System.Windows.Forms.Label();
             this.labelCustomerFullName = new System.Windows.Forms.Label();
+            this.labelTitle4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -73,6 +84,17 @@ namespace SmokiIDzikieWeze.UI.Forms
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.labelTitle4);
+            this.splitContainer1.Panel2.Controls.Add(this.buttonSave);
+            this.splitContainer1.Panel2.Controls.Add(this.labelTitle3);
+            this.splitContainer1.Panel2.Controls.Add(this.lbl1ToTextBox);
+            this.splitContainer1.Panel2.Controls.Add(this.lbl2ToTextBox);
+            this.splitContainer1.Panel2.Controls.Add(this.lbl3ToTextBox);
+            this.splitContainer1.Panel2.Controls.Add(this.lbl4ToTextBox);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox4);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox3);
             this.splitContainer1.Panel2.Controls.Add(this.labelTitle2);
             this.splitContainer1.Panel2.Controls.Add(this.labelCustomerEmail);
             this.splitContainer1.Panel2.Controls.Add(this.labelCustomerId);
@@ -158,6 +180,7 @@ namespace SmokiIDzikieWeze.UI.Forms
             this.buttonUpdate.TabIndex = 15;
             this.buttonUpdate.Text = "Edytuj";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonRemove
             // 
@@ -196,6 +219,100 @@ namespace SmokiIDzikieWeze.UI.Forms
             this.label1.Size = new System.Drawing.Size(161, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "LISTA KLIENTÓW";
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonSave.FlatAppearance.BorderSize = 0;
+            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSave.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSave.Location = new System.Drawing.Point(266, 268);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(114, 32);
+            this.buttonSave.TabIndex = 24;
+            this.buttonSave.Text = "Zapisz";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // labelTitle3
+            // 
+            this.labelTitle3.AutoSize = true;
+            this.labelTitle3.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTitle3.ForeColor = System.Drawing.Color.Black;
+            this.labelTitle3.Location = new System.Drawing.Point(30, 25);
+            this.labelTitle3.Name = "labelTitle3";
+            this.labelTitle3.Size = new System.Drawing.Size(69, 21);
+            this.labelTitle3.TabIndex = 23;
+            this.labelTitle3.Text = "EDYTUJ";
+            // 
+            // lbl1ToTextBox
+            // 
+            this.lbl1ToTextBox.AutoSize = true;
+            this.lbl1ToTextBox.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl1ToTextBox.Location = new System.Drawing.Point(28, 107);
+            this.lbl1ToTextBox.Name = "lbl1ToTextBox";
+            this.lbl1ToTextBox.Size = new System.Drawing.Size(47, 21);
+            this.lbl1ToTextBox.TabIndex = 22;
+            this.lbl1ToTextBox.Text = "IMIĘ:";
+            // 
+            // lbl2ToTextBox
+            // 
+            this.lbl2ToTextBox.AutoSize = true;
+            this.lbl2ToTextBox.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl2ToTextBox.Location = new System.Drawing.Point(28, 145);
+            this.lbl2ToTextBox.Name = "lbl2ToTextBox";
+            this.lbl2ToTextBox.Size = new System.Drawing.Size(93, 21);
+            this.lbl2ToTextBox.TabIndex = 21;
+            this.lbl2ToTextBox.Text = "NAZWISKO";
+            // 
+            // lbl3ToTextBox
+            // 
+            this.lbl3ToTextBox.AutoSize = true;
+            this.lbl3ToTextBox.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl3ToTextBox.Location = new System.Drawing.Point(30, 186);
+            this.lbl3ToTextBox.Name = "lbl3ToTextBox";
+            this.lbl3ToTextBox.Size = new System.Drawing.Size(30, 21);
+            this.lbl3ToTextBox.TabIndex = 20;
+            this.lbl3ToTextBox.Text = "ID:";
+            // 
+            // lbl4ToTextBox
+            // 
+            this.lbl4ToTextBox.AutoSize = true;
+            this.lbl4ToTextBox.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl4ToTextBox.Location = new System.Drawing.Point(28, 221);
+            this.lbl4ToTextBox.Name = "lbl4ToTextBox";
+            this.lbl4ToTextBox.Size = new System.Drawing.Size(63, 21);
+            this.lbl4ToTextBox.TabIndex = 19;
+            this.lbl4ToTextBox.Text = "EMAIL:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(140, 106);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(240, 22);
+            this.textBox1.TabIndex = 18;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(140, 143);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(240, 22);
+            this.textBox2.TabIndex = 17;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(140, 220);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(240, 22);
+            this.textBox4.TabIndex = 16;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(140, 183);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(240, 22);
+            this.textBox3.TabIndex = 15;
             // 
             // labelTitle2
             // 
@@ -255,6 +372,18 @@ namespace SmokiIDzikieWeze.UI.Forms
             this.labelCustomerFullName.TabIndex = 10;
             this.labelCustomerFullName.Text = "{{ IN CODE }}";
             // 
+            // labelTitle4
+            // 
+            this.labelTitle4.AutoSize = true;
+            this.labelTitle4.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTitle4.ForeColor = System.Drawing.Color.Black;
+            this.labelTitle4.Location = new System.Drawing.Point(35, 25);
+            this.labelTitle4.Name = "labelTitle4";
+            this.labelTitle4.Size = new System.Drawing.Size(56, 21);
+            this.labelTitle4.TabIndex = 25;
+            this.labelTitle4.Text = "NOWY";
+            this.labelTitle4.Click += new System.EventHandler(this.label2_Click);
+            // 
             // FormCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,5 +425,16 @@ namespace SmokiIDzikieWeze.UI.Forms
         protected internal Button buttonDisplay;
         private Label labelTitle1;
         private Label labelTitle2;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        protected internal Label lbl1ToTextBox;
+        protected internal Label lbl2ToTextBox;
+        protected internal Label lbl3ToTextBox;
+        protected internal Label lbl4ToTextBox;
+        private Label labelTitle3;
+        protected internal Button buttonSave;
+        private Label labelTitle4;
     }
 }
