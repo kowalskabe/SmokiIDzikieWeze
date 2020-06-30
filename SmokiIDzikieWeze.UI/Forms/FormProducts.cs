@@ -111,6 +111,7 @@ namespace SmokiIDzikieWeze.UI.Forms
             var repo = new ProductRepository().Delete(i);
             listBoxListOfProducts.DataSource = repo;
             HideSingleProductData();
+            richTextBoxInfo.Show();
         }
     }
 }

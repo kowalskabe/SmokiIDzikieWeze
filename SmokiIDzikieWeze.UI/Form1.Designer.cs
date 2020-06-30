@@ -36,8 +36,6 @@ namespace SmokiIDzikieWeze.UI
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnOrders = new System.Windows.Forms.Button();
-            //tmp
-            this.btnOrders.Hide();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnShopping = new System.Windows.Forms.Button();
@@ -91,7 +89,7 @@ namespace SmokiIDzikieWeze.UI
             this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProducts.FlatAppearance.BorderSize = 0;
             this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducts.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnProducts.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnProducts.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnProducts.Location = new System.Drawing.Point(0, 200);
             this.btnProducts.Name = "btnProducts";
@@ -108,7 +106,7 @@ namespace SmokiIDzikieWeze.UI
             this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomers.FlatAppearance.BorderSize = 0;
             this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomers.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnCustomers.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnCustomers.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCustomers.Location = new System.Drawing.Point(0, 140);
             this.btnCustomers.Name = "btnCustomers";
@@ -125,7 +123,7 @@ namespace SmokiIDzikieWeze.UI
             this.btnShopping.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnShopping.FlatAppearance.BorderSize = 0;
             this.btnShopping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShopping.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnShopping.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnShopping.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnShopping.Location = new System.Drawing.Point(0, 80);
             this.btnShopping.Name = "btnShopping";
